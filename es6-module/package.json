@@ -8,5 +8,11 @@
   },
   "keywords": [],
   "author": "Bruno Germano <brunoalvesgermano@gmail.com> (https://github.com/brgermano)",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/preset-env": "^7.12.7",
+    "babel-loader": "^8.2.2",
+    "webpack": "^5.9.0"
+  }
 }
