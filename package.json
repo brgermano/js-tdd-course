@@ -23,9 +23,13 @@
   },
   "homepage": "https://github.com/brgermano/js-tdd-course#readme",
   "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/preset-env": "^7.12.7",
+    "babel-loader": "^8.2.2",
     "eslint": "^7.14.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
-    "husky": "^4.3.0"
+    "husky": "^4.3.0",
+    "webpack": "^5.9.0"
   }
 }
