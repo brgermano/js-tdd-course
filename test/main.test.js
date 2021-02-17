@@ -1,46 +1,32 @@
-/*
-describe separa os grandes blocos
-
-dentro de um describe podemos criar outros
-para testar os metodos por exemplo
-
-e dentro desses sub-describes podemos criar os
-contextos
-
-it é oq de fato vai rodar
-
-*/
 /* eslint-disable */
 describe('Main', () => {
-  describe('Method A', () => {
-    context('Case 1', () => {
-      // skip diz pro mocha pra pular esse teste
-      it.skip('sould happen sum 2 with 2 and return 4', () => {
-        // espera que aconteça
-        // Entra de dados / metodo sum(2,2)
-        // Espera retornar (4) => true | (3) => false => broken test
-        throw new Error('just on error');
-      });
-    });
-
-    //only diz que quero rodar somente esse bloco
-    context.only('Case 2', () => {
-      it('sould happen mimi', () => {
-        // espera que aconteça
-        // Entra de dados / metodo sum(2,2)
-        // Espera retornar (4) => true | (3) => false => broken test
-        throw new Error('just on error');
-      });
-
-      it('sould happen blabla', () => {
-        // espera que aconteça
-        // Entra de dados / metodo sum(2,2)
-        // Espera retornar (4) => true | (3) => false => broken test
-      });
-    });
+  
+  //roda uma vez, antes do bloco
+  before(() => {
+    console.log('before');
   });
 
-  describe('Method B', () => {
-    
+  // roda uma vez, depois do bloco
+  after(() => {
+    console.log('after');
   });
-})
+
+  //roda todas as vezes, antes de cada bloco
+  beforeEach(() => {
+    console.log('beforeEach');
+  });
+
+  //roda todas as vezes, depois de cada bloco
+  afterEach(() => {
+    console.log('afterEach');
+  });
+
+  it('test 1', () => {
+    console.log('test 1');
+  });
+
+  it('test 2', () => {
+    console.log('test 2');
+  });
+
+});
