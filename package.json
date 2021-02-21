@@ -4,7 +4,7 @@
   "description": "Our lib of the TDD with JS course",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint '**/*.js' --ignore-pattern node_modules/",
+    "lint": "eslint '**/*.js' --ignore-pattern es6-module/",
     "test": "mocha test/ --reporter spec"
   },
   "repository": {
