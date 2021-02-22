@@ -23,6 +23,10 @@ describe('Main', () => {
 
   });
 
+  //testar tipos ou se existe (smoke test)
+  it('should be an array', () => {
+    expect(arr).to.be.a('array');
+  });
   
   it('should have a size of 4 when push another value to the array', () => {
     arr.push(4);
@@ -34,7 +38,12 @@ describe('Main', () => {
     console.log(arr.length);
   });
 
+  it('should return true when pop 3 from the array', () => {
+    expect(arr.pop() === 3).to.be.true;
+  });
+
   it('should remove the value three when use pop in the array', () => {
-    console.log(arr.pop() === 3); // true
+    arr.pop(); 
+    expect(arr).to.not.include(3);
   });
 });
