@@ -1,4 +1,6 @@
+const { expect } = require('chai');
 /* eslint-disable */
+
 describe('Main', () => {
   var arr;
   //roda uma vez, antes do bloco
@@ -24,7 +26,7 @@ describe('Main', () => {
   
   it('should have a size of 4 when push another value to the array', () => {
     arr.push(4);
-    console.log(arr.length); //4
+    expect(arr).to.have.lengthOf(4);
   });
 
   it('should have a size of 2 when pop a value from the array', () => {
